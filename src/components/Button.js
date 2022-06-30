@@ -11,7 +11,7 @@ class Button extends Component {
     return (
       <button className={`ui button ${color}`}>
         <LanguageContext.Consumer>
-          {this.translateText}
+          {({language}) => this.translateText(language)}
         </LanguageContext.Consumer>
       </button>
     );
